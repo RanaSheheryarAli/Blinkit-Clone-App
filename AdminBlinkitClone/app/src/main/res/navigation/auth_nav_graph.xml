@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_nav_grapg"
+    app:startDestination="@id/splashFragment2">
+
+    <fragment
+        android:id="@+id/splashFragment2"
+        android:name="com.example.adminblinkitclone.auth.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment2_to_signinFragment"
+            app:destination="@id/signinFragment"
+            app:popUpTo="@id/splashFragment2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signinFragment"
+        android:name="com.example.adminblinkitclone.auth.signinFragment"
+        android:label="fragment_signin"
+        tools:layout="@layout/fragment_signin" >
+        <action
+            android:id="@+id/action_signinFragment_to_otpFragment2"
+            app:destination="@id/otpFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/otpFragment2"
+        android:name="com.example.adminblinkitclone.auth.otpFragment"
+        android:label="fragment_otp"
+        tools:layout="@layout/fragment_otp" >
+        <action
+            android:id="@+id/action_otpFragment2_to_signinFragment"
+            app:destination="@id/signinFragment"
+            app:popUpTo="@id/signinFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
